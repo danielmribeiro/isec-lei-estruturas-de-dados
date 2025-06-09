@@ -1,0 +1,34 @@
+##############################
+
+if(n>20000) //esta condicao limita o valor de n
+    n=20000;
+for(long i=0; i<n; i++)
+    for(long j=0; j<n; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(1)
+- Ordem constante
+
+Explicação:
+- Algoritmo de ordem constante O(1).
+- O aumento de N, no limite, não interfere com o tempo de execução, porque N é truncado em 20000.
+- Os ciclos encadeados têm um comportamento aparentemente quadrático. No entanto, o valor de N é limitado a 20000 pela primeira linha.
+- Isso significa que o ciclo irá ter, sempre 20000*20000=400000000 iterações de "soma++", para valores suficientemente elevados de N (neste caso, valores de N>=20000).
+- Respostas como "é O(N^2) para N<20000 e O(1) para N>=20000" não fazem muito sentido dado que, por definição, a notação de O descreve apenas o que acontece para valores de N suficientemente elevados.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução mantém-se
+
+Explicação:
+- Tem o mesmo tempo de execução à medida que N aumenta para valores de N elevados.

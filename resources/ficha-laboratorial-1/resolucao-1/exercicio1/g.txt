@@ -1,0 +1,30 @@
+##############################
+
+for(long i=0; i<n; i++)
+    for(long j=0; j<n*n; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N^3)
+- ordem cubica
+
+Explicação:
+- O primeiro ciclo executa N vezes. O segundo executa N*N. Portanto a instrução dominante "soma++" executa N*(N*N)=N^3.
+- O algoritmo é de ordem O(n^3), complexidade cúbica.
+- Dois ciclos encadeados não resultam necessariamente em complexidade quadrática - a complexidade pode ser menor ou maior.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 64 vezes
+
+Explicação:
+- Quando N aumenta 4 vezes, o tempo de execução passa a ser 4N*(4N*4N)=(4^3)(N^3)=64N^3. Portanto, aumenta 64 vezes mais.

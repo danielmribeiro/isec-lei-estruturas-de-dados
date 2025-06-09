@@ -1,0 +1,65 @@
+5 - 
+
+- Alteração na classe BinaryTree para ter um construtor que inicializa o nó sentinela
+- A árvore inicial também deve ser o nó sentinela
+- Na inserção, cada vez que se cria um nó para inserir na árvore, o sentinela deve ser colocado à esquerda e à direita
+
+
+public class Binarytree<T extends Comparable<? super T>>{
+private Node<T> root, nullnode; //nullnode é o nó sentinela
+private Comparator<T> comp;
+
+BinaryTree(Comparator<T> cmp){
+
+comp=cmp;
+nullnode= new Node<>(); //inicialização do nó sentinela
+nullnode.setLeft(nullnode); nullnode.setRight(nullNode);
+root=nullnode;
+}
+
+No resto da classe, todas as atribuições e comparações com null devem ser substituidas por atribuições e comparações com null.
+
+
+
+
+6-
+
+BinaryTree<integer> it = new BinaryTree<>();
+ArrayList<Integer> al = new ArrayList();
+int i,a,b,len = 1000000,hi;
+Integer temp;
+Random r = new Random();
+
+for(i=0;i<len;i++)al.add(i); //criar lista com elementos ordenados
+
+hl = len/2; //experimentar len/2, len e outros valores
+for(i=0;i<hl;i++){ //Baralhar metade do array
+a=r.nextInt(len); b= r.nextInt(len);
+temp = al.get(a);
+al.set(a.al.get(b)); al.set(b.temp);
+}
+
+Iterator ai = al.iterator();
+wwhile(ai.hasNext()) it.insere((Integer)ai.next());
+
+System.out.println("A árvore tem "+it.tamanho()+" elementos, em "+it.profundidade()+" níveis");
+System.out.println("Devia ter ester niveis: "+math.log(len)/Math.log(2));
+
+
+7-
+
+public void imprimeNivel(Node<T> t, List<T> lst, int l){
+T item;
+System.out.println("-----Nível "+l´" -----");
+ListIterator li = lst.listIterator();
+while(li.hasNext()){
+item=(T)li.next();
+if(profundidadeDe(root,item)==l) System.out.println("["+l+"]"+item);
+}
+}
+public void imprimePorNiveis(){
+int j,l = produndidade(root);
+List<T> lst = new ArrayList<>();
+ordemLst(root,lst);
+System.out.println("====Conteúdo da árvore====");
+for(j=1;j<=l;j++) imprimeNivel(root,lst,l);

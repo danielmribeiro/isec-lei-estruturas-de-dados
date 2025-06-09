@@ -1,0 +1,37 @@
+##############################
+
+for(long i=0; i<n; i++)
+    for(long j=0; j<i; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N^2)
+- ordem quadrática
+
+Explicação:
+- Quantas vezes é executado o ciclo interior por cada iteração do ciclo exterior?
+    - Para i=0, o ciclo interior é executado 0 iterações
+    - Para i=1, o ciclo interior é executado 1 iterações
+    - Para i=2, o ciclo interior é executado 2 iterações
+    - Para i=3, o ciclo interior é executado 3 iterações
+    - ...
+    - Para i=M, o ciclo interior é executado M-1 iterações
+- O número de iterações do ciclo interior é dado por 1+2+3+4+...+(N-2)+(N-1). Esta soma pode ser calculada matematicamente pela expressão N*sum{i=0..N}=(1/2)(N)(N+1) que é O(N^2).
+- Graficamente, a soma de todos os números entre 1 e N pode ser representada como sendo a área de um triângulo retângulo (da esquerda para a direita, uma coluna de altura 1, seguida de uma coluna de altura 2, etc). Dessa forma, torna-se claro que a soma (área) é igual a aproximadamente metade da área do quadrado (N^2). Em vez de uma matriz, processa-se "meia matriz".
+- O termo linear que pode ser observado na fórmula torna-se irrelevante para valores elevados de N, quando comparado como o termo quadrático.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 16 vezes
+
+Explicação:
+- Quando N aumenta 4 vezes, o tempo de execução aumenta na mesma 16 vezes.

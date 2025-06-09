@@ -1,0 +1,29 @@
+##############################
+
+for(long i=0; i<n*n; i++)
+    for(long j=0; j<i; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N^3)
+- ordem cubica
+
+Explicação:
+- O ciclo interno vai iterar 1+(2^2)+(3^2)+(4^2)+...((n-1)^2) vezes.
+- A expressão matemática para este somatório é (N*(N+1)*(2N+1))/6, pelo que o resultado é de ordem cúbica.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 64 vezes
+
+Explicação:
+- Quando N aumenta 4 vezes, o tempo de execução aumenta 4^3=64 vezes.

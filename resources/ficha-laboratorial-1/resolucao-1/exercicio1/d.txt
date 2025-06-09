@@ -1,0 +1,31 @@
+##############################
+
+for(long i=0; i<1000; i++)
+    for(long j=0; j<n; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N)
+- Ordem linear
+
+Explicação:
+- Aqui, no pior dos casos, o ciclo externo executa 1000 vezes. Mil vezes algo linear é também linear.
+- O facto de serem dois ciclos encadeados não implica automaticamente que seja um algoritmo quadrático.
+- A instrução dominante é executada no pior dos casos 1000*N vezes, portanto o ciclo exterior atua como uma constante.
+- O algoritmo continua a ser de ordem O(N).
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 4 vezes
+
+Explicação:
+- Quando N aumenta 4 vezes, o tempo passa a ser no pior dos casos 1000*(4N)=4000N, portanto aumenta de forma linear 4 vezes.

@@ -1,0 +1,39 @@
+##############################
+
+for(long i=0; i<n; i*=2)
+    soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(log(N))
+- ordem logaritmica
+
+Explicação:
+- O i duplica a cada iteração. Exemplo de ordem logaritmica, O(log(N))
+- Um aumento de 4 vezes o N obriga a mais duas iterações.
+- Na matemática, um logaritmo é o "inverso" do expoente: log2(N)=X <=> (2^X)=N
+- É o número de bits necessário para representar o inteiro N.
+    - log2(N) é o número de vezes que é necessário dividir N por 2 para chegar a 1. (esta interpretação será importante quando for abordada a pesquisa binária)
+    - log2(N) é o número de vezes que é necessário dividir N por 2 (começando em 1) até chegar a N. Como no exemplo de código desta alínea.
+- Quantas iterações adicionais são necessárias se o valor de N aumentar para o dobro? 1 iteração. Quando N quadruplica, são realizadas mais duas iterações.
+    - A base do logaritmo não importa para a complexidade porque o logaritmo de N numa determinada base é proporcional ao logaritmo do mesmo valor noutra base, logB(N)=(logX(N))/(logX(B)).
+    - Exemplo: ln(N) = (log2(N)/log2(e)). O valor (1/log2(e)) é constante e independente em relação a N. Graficamente a curva mantém a "mesma forma" pelo que a caraterística de complexidade é a mesma.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução é sensivelmente o mesmo visto que só obriga a mais 2 iterações
+
+Explicação:
+- Ao evoluir de forma logaritmica só necessita de mais 2 iterações.
+- Exemplo:
+    - Se N for 2, 4N será 4*2=8.
+    - Se a iteração 0 estiver no 2, a iteração 1 duplicará o valor anterior para 4 e a iteração 2 duplicará o valor anterior para 8.
+    - Para chegar do N ao 4N foi preciso apenas 2 iterações

@@ -1,0 +1,28 @@
+##############################
+
+for(long i=0; i<n; i+=2)
+    soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N)
+- Ordem Linear
+
+Explicação:
+- O i é incrementado em passos de 2. Portanto o tempo de execução é N/2. Mas metade de algo linear é também linear. O algoritmo continua a ser de ordem O(N)
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 4 vezes
+
+Explicação:
+- Aumentando o número de execuções de N para 4N, o tempo de execução aumenta 4 vezes.
+- O tempo de execução passa a ser 4 vezes mais do que N/2, ou seja, 4N/2=2N.

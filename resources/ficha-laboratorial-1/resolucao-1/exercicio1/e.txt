@@ -1,0 +1,31 @@
+##############################
+
+for(long i=0; i<n; i++)
+    soma++;
+for(long j=0; j<n; j++)
+    soma++;
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N)
+- Ordem linear
+
+Explicação:
+- O tempo de execução é N+N=2N.
+- O dobro de algo linear é também linear.
+- Vários "algoritmos" ou trechos de código linear consecutivos resultam em código linear.
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 4 vezes
+
+Explicação:
+- Quanto N aumenta 4 vezes, o tempo passa a ser 2*(4N)=8N, portanto aumenta linearmente 4 vezes (de 2N para 8N).

@@ -1,0 +1,29 @@
+##############################
+
+for(long i=0; i<n; i++)
+    for(long j=0; j<n; j++)
+        soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N^2) ou Θ(N^2)
+- Ordem Quadrática
+
+Explicação:
+- A instrução soma++ é executada N*N vezes (ciclo exterior * ciclo interior), logo a sua complexidade é quadrática, O(N^2)
+
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 16 vezes
+
+Explicação:
+- Se o N for aumentado para 4N, o soma++ vai ser executado 4N*4N vezes, ou seja 16(N^2). Portanto, o tempo de execução aumenta 16 vezes

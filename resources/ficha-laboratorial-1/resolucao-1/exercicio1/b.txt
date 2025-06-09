@@ -1,0 +1,27 @@
+##############################
+
+for(long i=0; i<n; i++)
+    soma++; //instrução dominante
+
+##############################
+
+
+
+### Análise de complexidade: ###
+
+Resposta:
+- O(N)
+- Ordem Linear
+
+Explicação:
+- Trata-se apenas de um ciclo, em que a instrução dominante executa N vezes. Portanto, a complexidade é linear, O(N).
+
+
+
+### Tempo de execução caso a dimensão de N aumente 4 vezes: ###
+
+Resposta:
+- Tempo de execução aumenta 4 vezes
+
+Explicação:
+- Quando N aumenta 4 vezes, o tempo de execução aumenta de N para 4N, portanto aumenta 4 vezes o tempo de execução.
